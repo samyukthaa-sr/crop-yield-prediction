@@ -1,4 +1,4 @@
-# 🌱 Crop Recommendation System
+# 🌱 Crop Yield Prediction
 
 This project is a **Flask-based web application** that predicts crop yield categories (**High, Medium, Low**) based on crop type, soil conditions, weather parameters, and fertilizer usage.
 It uses a **Decision Tree Classifier** trained on agricultural data.
@@ -90,4 +90,5 @@ Predicted Yield: Medium
 * Extend dataset with real agricultural data.
 * Integrate weather API for real-time predictions.
 * Deploy on **Heroku / AWS / Render** for public access.
+
 
