@@ -66,18 +66,18 @@ It uses a **Decision Tree Classifier** trained on agricultural data.
 
 ## 🧪 Example Input
 
-* Crop: **Rice**
-* Temperature: **30°C**
-* Rainfall: **300 mm**
-* Soil pH: **5.5**
-* Humidity: **85%**
-* Fertilizer: **70 kg/ha**
+* Crop: **Barley**
+* Temperature: **40°C**
+* Rainfall: **35 mm**
+* Soil pH: **4**
+* Humidity: **20%**
+* Fertilizer: **1 kg/ha**
 
 
 ### ✅ Output
 
 ```
-Predicted Yield: Medium
+Predicted Yield: High
 ```
 
 
@@ -90,5 +90,6 @@ Predicted Yield: Medium
 * Extend dataset with real agricultural data.
 * Integrate weather API for real-time predictions.
 * Deploy on **Heroku / AWS / Render** for public access.
+
 
 
