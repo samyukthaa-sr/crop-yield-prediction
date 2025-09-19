@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Yield Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f8ff; padding: 20px; }
+        .container { max-width: 550px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; }
+        input, select, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #28a745; color: #fff; border: none; cursor: pointer; }
+        button:hover { background: #218838; }
+        .result { margin-top: 20px; font-size: 1.1em; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Crop Yield Predictor</h2>
+    <form action="/predict" method="post">
+        <label>Crop Name:</label>
+        <select name="crop" required>
+            {% for c in crops %}
+            <option value="{{ c }}">{{ c }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Temperature (°C):</label>
+        <input type="number" name="temperature" step="0.1" required>
+
+        <label>Rainfall (mm):</label>
+        <input type="number" name="rainfall" step="0.1" required>
+
+        <label>Soil pH:</label>
+        <input type="number" name="soil_ph" step="0.1" required>
+
+        <label>Humidity (%):</label>
+        <input type="number" name="humidity" step="0.1" required>
+
+        <label>Fertilizer (kg/acre):</label>
+        <input type="number" name="fertilizer" step="0.1" required>
+
+        <button type="submit">Predict Yield</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h3>Predicted Yield for {{ crop }}:</h3>
+        <p><strong>{{ yield_category }}</strong></p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
