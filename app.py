@@ -73,5 +73,5 @@ def predict():
                            prediction=True, crop=crop_name, yield_category=yield_category)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=10000, debug=True)
 
